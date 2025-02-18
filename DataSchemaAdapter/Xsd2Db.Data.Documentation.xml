@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xsd2Db.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Xsd2Db.Data.CreatorSchema">
+            <summary>
+            Importing a dataset obtained from an XSD schema
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.CreatorSchema.Create(Xsd2Db.Data.Parameter)">
+            <summary>
+            Procedure for importing a dataset obtained from an XSD schema
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="E:Xsd2Db.Data.CreatorSchema.ConnectionChanged">
+            <summary>
+            Event that occurs when changes are made to the database connection
+            </summary>
+        </member>
+        <member name="T:Xsd2Db.Data.IDataSchemaAdapter">
+            <summary>
+            Summary description for DataSchemaAdapter.
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.IDataSchemaAdapter.Param">
+            <summary>
+             Parameters import XSD
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.IDataSchemaAdapter.Create">
+            <summary>
+            Create a new database conforming to the passed schema.
+            </summary>
+            
+        </member>
+        <member name="M:Xsd2Db.Data.IDataSchemaAdapter.SaveToDB(System.Data.DataTable)">
+            <summary>
+            Import data from DataTable in DataBase
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.IDataSchemaAdapter.SaveToDB">
+            <summary>
+             Import data from DataSet in DataBase
+            </summary>
+        </member>
+        <member name="E:Xsd2Db.Data.IDataSchemaAdapter.ConnectionChanged">
+            <summary>
+            Event that occurs when changes are made to the database connection
+            </summary>
+        </member>
+        <member name="T:Xsd2Db.Data.Enums">
+            <summary>
+            Application Enumerations
+            </summary>
+        </member>
+        <member name="T:Xsd2Db.Data.Enums.DatabaseType">
+            <summary>
+            Enumeration of supported database types
+            </summary>         
+        </member>
+        <member name="F:Xsd2Db.Data.Enums.DatabaseType.NoDefine">
+            <summary>
+            The database type is undefined
+            </summary>
+        </member>
+        <member name="F:Xsd2Db.Data.Enums.DatabaseType.Sql">
+            <summary>
+            Database Sql Server 14
+            </summary>
+        </member>
+        <member name="F:Xsd2Db.Data.Enums.DatabaseType.NpgSql">
+            <summary>
+            Database Postgres Server 15.1
+            </summary>
+        </member>
+        <member name="T:Xsd2Db.Data.ConnectionStringEventArgs">
+            <summary>
+            Arguments of the event that occurs when changes are made to the database connection
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.ConnectionStringEventArgs.DataConnection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ConnectionStringEventArgs.#ctor(System.Data.IDbConnection)">
+            <summary>
+            Constructor of arguments for a new event that occurs 
+            when changes are made to the database connection
+            </summary>
+            <param name="dbConnection"></param>
+        </member>
+        <member name="T:Xsd2Db.Data.ParameterCollection">
+            <summary>
+            Collection of XSD/XML schema import settings
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ParameterCollection.#ctor">
+            <summary>
+            Constructor of the XSD/XML Import Settings collection
+            </summary>
+        </member>
+        <member name="T:Xsd2Db.Data.Parameter">
+            <summary>
+            Parameters import XSD
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.Schema">
+            <summary>
+            The dataset obtained from the XSD schema
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.InitialCatalog">
+            <summary>
+            The name of the database to be created
+            </summary>       
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.DbOwner">
+            <summary>
+            This optional property stores the owner that will be assigned to each table.
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.TablePrefix">
+            <summary>
+            This property stores the optional table prefix that will be given to each table
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.SchemaFile">
+            <summary>
+            The property denotes the source XSD file provided by the user.
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.DataSetName">
+            <summary>
+            TableName
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.SchemaName">
+            <summary>
+            Table schema name
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.Type">
+            <summary>
+            The type of database specified by the user.
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.Host">
+            <summary>
+            The property denotes the database host if SQL server is used.
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.Port">
+            <summary>
+            This procedure sets or gets the port number to connect to the database
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.Force">
+            <summary>
+            This property indicates whether or not the user has requested
+            that any existing database be overwritten from the schema.  This
+            option should be used with extreme care.
+            </summary>       
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.ImportData">
+            <summary>
+            This procedure sets or gets a sign of the need to import Dataset data
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.User">
+            <summary>
+            This property stores the name of the database user to connect to
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.Password">
+            <summary>
+            This property stores the password of the user to connect to the database
+            </summary>       
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.Timeout">
+            <summary>
+            Timeout connect database
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.CommandTimeout">
+            <summary>
+            Command timeout
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.Parameter.ParameterName">
+            <summary>
+            Alias of XSD/XML import settings
+            </summary>
+        </member>
+        <member name="F:Xsd2Db.Data.Parameter.onPropertyChanged">
+            <summary>
+            Property Change Event
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.Parameter.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Property Change Event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:Xsd2Db.Data.Parameter.PropertyChanged">
+            <summary>
+            Property Change Event
+            </summary>
+        </member>
+        <member name="T:Xsd2Db.Data.ScriptBasedDataSchemaAdapter">
+            <summary>
+            This abstract class implements most of the functionality required
+            to map an XSD schema (represented with a DataSet) to an SQL creation
+            script.
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.Param">
+            <summary>
+             Parameters import XSD
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.SaveToDB(System.Data.DataTable)">
+            <summary>
+             Import data from DataTable in DataBase
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.SaveToDB">
+            <summary>
+            Import data from DataSet in Postgres DataBase
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.GetCreateDBScript">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.GetConnection">
+            <summary>
+            Child classes should provice an implementation which returns a
+            connection to the server on which to create the new database.
+            The returned connection must be bound to the context of the
+            catalog/database given as a parameter (by name).
+            </summary>
+            <returns>an unopened connection to the server.</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.GetConnection(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="catalog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.Xsd2Db#Data#IDataSchemaAdapter#Create">
+            <summary>
+            Create a new database conforming to the passed schema.
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.ConvertDataTableToXML(System.Data.DataTable)">
+            <summary>
+            The function returns a string DataTable value as XML
+            </summary>
+            <param name="dtData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.Create">
+            <summary>
+            Create a new database conforming to the passed schema.
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.GetTypeFor(System.Data.DataColumn)">
+            <summary>
+            Returns the type description for the column given.
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.MakeSafe(System.String)">
+            <summary>
+            Returns a safe version of the given name.
+            </summary>
+            <param name="inputValue">Original Name</param>
+            <returns>Converted name</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.MakeConstraint(System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.GetSchemaScript(System.Data.DataSet)">
+            <summary>
+            Returns the creation script which corresponds to the schema
+            contained in the .xsd file which is passed as a parameter.
+            </summary>
+            <exception cref="T:System.ArgumentException">This method does not support
+            the creation of a schema containing tables that have zero (0)
+            columns.  Nor does is support relations where one (or both) sides
+            of the relationship is defined by zero (0) columns.</exception>
+            <exception cref="T:System.NotSupportedException">May be thrown if the
+            method is unable to determine the database type for a column
+            </exception>
+            <param name="dataSet">the DataSet containing the database schema
+            to be created.
+            </param>
+            <returns>An SQL creation script corresponding to the schema of
+            the passed DataSet.</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.MakeList(System.Data.DataColumn[])">
+            <summary>
+            Returns the names of the columns in <paramref name="columns"/>.
+            </summary>
+            <param name="columns">the collection of columns to be put in the list</param>
+            <returns>the names of the columns in a comma separated list</returns>
+            <exception cref="T:System.ArgumentException">This is thrown if
+            <paramref name="columns"/> is empty or null</exception>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.MakeList(System.Data.DataColumnCollection)">
+            <summary>
+            Returns the names of the columns in <paramref name="columns"/>.
+            </summary>
+            <param name="columns">the collection of columns to be put in the list</param>
+            <returns>the names of the columns in a comma separated list</returns>
+            <exception cref="T:System.ArgumentException">This is thrown if
+            <paramref name="columns"/> is empty or null</exception>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.MakeRelation(System.Data.DataRelation)">
+            <summary>
+            Returns a script which will create a database relations
+            corresponding to the passed DataRelation.
+            </summary>
+            <param name="relation">the DataRelation to be scripted</param>
+            <returns>the script to create the relation</returns>
+            <exception cref="T:System.ArgumentException">This is thrown if
+            <paramref name="relation"/> is null or any of the
+            key sets in the relation are empty</exception>
+        </member>
+        <member name="E:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.InternalConnectionChanged">
+            <summary>
+             Event that occurs when changes are made to the database connection
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.OnConnectionChanged(Xsd2Db.Data.ConnectionStringEventArgs)">
+            <summary>
+            Event that occurs when changes are made to the database connection
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:Xsd2Db.Data.ScriptBasedDataSchemaAdapter.ConnectionChanged">
+            <summary>
+            Event that occurs when changes are made to the database connection
+            </summary>
+        </member>
+        <member name="T:Xsd2Db.Data.NpgSqlDataSchemaAdapter">
+            <summary>
+            A class which generates creation scripts which are compatible
+            with Postgres SQL Server 15.1
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.NpgSqlDataSchemaAdapter.Param">
+            <summary>
+            Parameters import XSD
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.#ctor(Xsd2Db.Data.Parameter)">
+            <summary>
+            Adapter for writing an XSD schema to a PostgresSQL database
+            </summary>
+            <param name="param">XSD Schema Export Parameters</param>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.#cctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.GetConnection">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.GetConnection(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="catalog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.MakeTable(System.Data.DataTable)">
+            <summary>
+            Returns a script which creates a database table that
+            corresponds to <paramref name="table"/>.
+            </summary>
+            <param name="table"></param>
+            <returns>the script which creates a table corresponding to <paramref name="table"/></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.MakeSafe(System.String)">
+            <summary>
+            Postgres Server names to be more than 128 characters long.
+            This function trims the given name and returns at
+            most the first 128 characters.  It also wraps the name
+            in square brackets (i.e., '"' and '"').
+            </summary>
+            <param name="inputValue">Original Name</param>
+            <returns>Converted name</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.GetTypeFor(System.Data.DataColumn)">
+            <summary>
+            Returns the type descriptor corresponding to
+            <paramref name="column"/>.
+            </summary>
+            <param name="column">the DataColumn for which the type is desired</param>
+            <returns>the type descriptor corresponding to
+            <paramref name="column"/></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.SaveToDB">
+            <summary>
+            Import data from DataSet in Postgres DataBase
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.SaveToDB(System.Data.DataTable)">
+            <summary>
+            Import data from DataTable in DataBase
+            </summary>
+            <param name="table">DataTable</param>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.GetCreateDBScript">
+            <summary>
+            Returns a script which creates an empty database having the given name.
+            </summary>
+            <returns>the script required to create an empty database having the given name</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.NpgSqlDataSchemaAdapter.MakeConstraint(System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xsd2Db.Data.SqlDataSchemaAdapter">
+            <summary>
+            A class which generates creation scripts which are compatible
+            with Microsoft SQL Server 2000.
+            </summary>
+        </member>
+        <member name="F:Xsd2Db.Data.SqlDataSchemaAdapter.TypeMap">
+            <summary>
+            A map between a data type name and a database type template
+            </summary>
+        </member>
+        <member name="P:Xsd2Db.Data.SqlDataSchemaAdapter.Param">
+            <summary>
+            Parameters import XSD
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.#ctor(Xsd2Db.Data.Parameter)">
+            <summary>
+            Creates a new SqlScriptGenerator instance.
+            </summary>
+            <param name="param">the database host to connect to</param>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.#cctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.GetConnection">
+            <summary>
+            
+            </summary>
+            <returns>Return IDbConnection</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.GetConnection(System.String)">
+            <summary>
+            
+            </summary>
+            <returns>Return IDbConnection</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.MakeTable(System.Data.DataTable)">
+            <summary>
+            Returns a script which creates a database table that
+            corresponds to <paramref name="table"/>.
+            </summary>
+            <param name="table"></param>
+            <returns>the script which creates a table corresponding to <paramref name="table"/></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.MakeSafe(System.String)">
+            <summary>
+            SQL Server names to be more than 128 characters long.
+            This function trims the given name and returns at
+            most the first 128 characters.  It also wraps the name
+            in square brackets (i.e., '[' and ']').
+            </summary>
+            <param name="inputValue">Original Name</param>
+            <returns>Converted name</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.GetTypeFor(System.Data.DataColumn)">
+            <summary>
+            Returns the type descriptor corresponding to
+            <paramref name="column"/>.
+            </summary>
+            <param name="column">the DataColumn for which the type is desired</param>
+            <returns>the type descriptor corresponding to
+            <paramref name="column"/></returns>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.SaveToDB(System.Data.DataTable)">
+            <summary>
+            Import data from DataTable in SqlServer DataBase
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.GetCreateScript">
+            <summary>
+            Returns a script which creates an empty database having the given name.
+            </summary>
+            <returns>the script required to create an empty database having the given name</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.SaveToDB">
+            <summary>
+            Import data from DataSet in Postgres DataBase
+            </summary>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.GetCreateDBScript">
+            <summary>
+            Returns a script which creates an empty database having the given name.
+            </summary>
+            <returns>the script required to create an empty database having the given name</returns>
+        </member>
+        <member name="M:Xsd2Db.Data.SqlDataSchemaAdapter.MakeConstraint(System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
